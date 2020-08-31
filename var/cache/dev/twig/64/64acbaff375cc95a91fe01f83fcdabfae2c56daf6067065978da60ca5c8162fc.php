@@ -85,11 +85,10 @@ class __TwigTemplate_c2fe43a5babceb4c967ed042c28e190d22db6046ce64948528beff26f1e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"container mt-4\">
-    <h1>Tous nos Biens</h1>
-    <p>Deserunt ea do labore nisi cupidatat irure do eu incididunt ipsum eiusmod reprehenderit ea. Et voluptate tempor occaecat cupidatat. Et excepteur esse laboris cillum officia minim tempor officia. Minim qui veniam duis culpa tempor eiusmod eiusmod exercitation officia excepteur labore labore excepteur. Est do incididunt ipsum dolor in duis est qui voluptate Lorem pariatur irure. Officia amet qui dolore nostrud proident magna pariatur mollit ut tempor mollit deserunt. Consequat nulla non Lorem est deserunt esse amet consectetur ut.</p>
-</div>
-
+        echo "    <div class=\"container mt-4\">
+        <h1>Tous nos Biens</h1>
+        <p>Deserunt ea do labore nisi cupidatat irure do eu incididunt ipsum eiusmod reprehenderit ea. Et voluptate tempor occaecat cupidatat. Et excepteur esse laboris cillum officia minim tempor officia. Minim qui veniam duis culpa tempor eiusmod eiusmod exercitation officia excepteur labore labore excepteur. Est do incididunt ipsum dolor in duis est qui voluptate Lorem pariatur irure. Officia amet qui dolore nostrud proident magna pariatur mollit ut tempor mollit deserunt. Consequat nulla non Lorem est deserunt esse amet consectetur ut.</p>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -121,12 +120,11 @@ class __TwigTemplate_c2fe43a5babceb4c967ed042c28e190d22db6046ce64948528beff26f1e
 {% block title 'Tous nos Biens' %}
 
 {% block body %}
-<div class=\"container mt-4\">
-    <h1>Tous nos Biens</h1>
-    <p>Deserunt ea do labore nisi cupidatat irure do eu incididunt ipsum eiusmod reprehenderit ea. Et voluptate tempor occaecat cupidatat. Et excepteur esse laboris cillum officia minim tempor officia. Minim qui veniam duis culpa tempor eiusmod eiusmod exercitation officia excepteur labore labore excepteur. Est do incididunt ipsum dolor in duis est qui voluptate Lorem pariatur irure. Officia amet qui dolore nostrud proident magna pariatur mollit ut tempor mollit deserunt. Consequat nulla non Lorem est deserunt esse amet consectetur ut.</p>
-</div>
-
+    <div class=\"container mt-4\">
+        <h1>Tous nos Biens</h1>
+        <p>Deserunt ea do labore nisi cupidatat irure do eu incididunt ipsum eiusmod reprehenderit ea. Et voluptate tempor occaecat cupidatat. Et excepteur esse laboris cillum officia minim tempor officia. Minim qui veniam duis culpa tempor eiusmod eiusmod exercitation officia excepteur labore labore excepteur. Est do incididunt ipsum dolor in duis est qui voluptate Lorem pariatur irure. Officia amet qui dolore nostrud proident magna pariatur mollit ut tempor mollit deserunt. Consequat nulla non Lorem est deserunt esse amet consectetur ut.</p>
+    </div>
 {% endblock %}
-", "property/index.html.twig", "/Users/workspace/Documents/WORKSPACE/WORKSPACE-PHP/MONPROJET/templates/property/index.html.twig");
+", "property/index.html.twig", "/Users/workspace/Documents/WORKSPACE/WORKSPACE-PHP/APP/learn_symphony_advanced/templates/property/index.html.twig");
     }
 }

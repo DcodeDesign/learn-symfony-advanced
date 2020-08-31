@@ -165,10 +165,7 @@ class __TwigTemplate_a12fb9718d54046a990c4abf867726d5414338d1fe3fbe0728d1386048c
                 <div class=\"col-md-4\"  >
                     <h2>Spécificités : </h2>
                 </div>
-
-
             </div>
-        
     </div>
 ";
         
@@ -252,10 +249,7 @@ class __TwigTemplate_a12fb9718d54046a990c4abf867726d5414338d1fe3fbe0728d1386048c
                 <div class=\"col-md-4\"  >
                     <h2>Spécificités : </h2>
                 </div>
-
-
             </div>
-        
     </div>
 {% endblock %}
 ", "property/show.html.twig", "/Users/workspace/Documents/WORKSPACE/WORKSPACE-PHP/APP/learn_symphony_advanced/templates/property/show.html.twig");

@@ -123,6 +123,10 @@ $catalogue = new MessageCatalogue('fr', array (
     'Account is disabled.' => 'Le compte est désactivé.',
     'Account is locked.' => 'Le compte est bloqué.',
   ),
+  'forms' => 
+  array (
+    'City' => 'Ville',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
