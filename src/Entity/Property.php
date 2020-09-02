@@ -6,6 +6,9 @@ use Cocur\Slugify\Slugify;
 use App\Repository\PropertyRepository;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\Regex;
+use Symfony\Component\Validator\Constraints\RegexValidator;
 
 /**
  * @ORM\Entity(repositoryClass=PropertyRepository::class)
@@ -29,6 +32,13 @@ class Property
     private $id;
 
     /**
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters",
+     *      allowEmptyString = false
+     * )
      * @ORM\Column(type="string", length=255)
      */
     private $title;
@@ -40,6 +50,7 @@ class Property
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=10, max=400)
      */
     private $surface;
 
@@ -49,6 +60,7 @@ class Property
     private $rooms;
 
     /**
+     * @Assert\NotBlank(message="Not be blank.")
      * @ORM\Column(type="integer")
      */
     private $floor;
@@ -74,6 +86,12 @@ class Property
     private $address;
 
     /**
+     * @Assert\NotBlank(message="Not be blank.")
+     * @Assert\Regex(
+     *   pattern     = "/^[0-9]{5}$/i",
+     *   htmlPattern = "^[0-9]{5}$",
+     *   message="ERROR"
+     * )
      * @ORM\Column(type="string", length=255)
      */
     private $postal_code;

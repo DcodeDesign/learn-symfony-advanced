@@ -65,7 +65,7 @@ class PropertyController extends AbstractController {
         $property[0]->setSold(true);
         $this->em->flush();
         */
-        return $this->render('property/index.html.twig',
+        return $this->render('pages/property/index.html.twig',
             [ 'current_menu' => 'property']);
     }
 
@@ -83,7 +83,7 @@ class PropertyController extends AbstractController {
             ], 301);
         }
 
-        return $this->render('property/show.html.twig',[   
+        return $this->render('pages/property/show.html.twig',[   
                 'property' => $property,
                 'current_menu' => 'property.show'
             ]);

@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Property;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class PropertyType extends AbstractType
@@ -19,10 +20,12 @@ class PropertyType extends AbstractType
             ->add('badRooms')
             ->add('floor')
             ->add('price')
-            ->add('heat')
+            ->add('heat', ChoiceType::class, [
+                'choices' => $this->getChoices()
+            ])
             ->add('city')
             ->add('address')
-            ->add('postal_code')
+            ->add('postalCode')
             ->add('sold')
             //->add('created_at')
         ;
@@ -34,5 +37,15 @@ class PropertyType extends AbstractType
             'data_class' => Property::class,
             'translation_domaine' => 'forms'
         ]);
+    }
+
+    private function getChoices()
+    {
+        $choices = Property::HEAT;
+        $output = [];
+        foreach($choices as $key => $value) {
+            $output[$value] = $key;
+        }
+        return $output;
     }
 }

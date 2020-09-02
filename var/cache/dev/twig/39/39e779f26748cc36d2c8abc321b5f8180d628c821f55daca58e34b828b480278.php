@@ -85,15 +85,31 @@ class __TwigTemplate_29e83b98b3892349a68580f3d2206d148cae490df982519b28e5979d553
         echo "\">Acheter</a>
                 </li>
             </ul>
-        </div>
+
+            ";
+        // line 27
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "user", [], "any", false, false, false, 27)) {
+            // line 28
+            echo "            <ul class=\"navbar-nav\">
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+            // line 30
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo "\" >Se déconnecter</a>
+                </li>
+            </ul>
+            ";
+        }
+        // line 34
+        echo "        </div>
     </nav>
     ";
-        // line 28
+        // line 36
         $this->displayBlock('body', $context, $blocks);
-        // line 29
+        // line 37
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 30
+        // line 38
         echo "    <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\"
         integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\">
     </script>
@@ -151,7 +167,7 @@ class __TwigTemplate_29e83b98b3892349a68580f3d2206d148cae490df982519b28e5979d553
 
     }
 
-    // line 28
+    // line 36
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -169,7 +185,7 @@ class __TwigTemplate_29e83b98b3892349a68580f3d2206d148cae490df982519b28e5979d553
 
     }
 
-    // line 29
+    // line 37
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -199,7 +215,7 @@ class __TwigTemplate_29e83b98b3892349a68580f3d2206d148cae490df982519b28e5979d553
 
     public function getDebugInfo()
     {
-        return array (  173 => 29,  155 => 28,  137 => 9,  118 => 6,  97 => 30,  94 => 29,  92 => 28,  80 => 23,  68 => 14,  62 => 10,  60 => 9,  54 => 6,  47 => 1,);
+        return array (  189 => 37,  171 => 36,  153 => 9,  134 => 6,  113 => 38,  110 => 37,  108 => 36,  104 => 34,  97 => 30,  93 => 28,  91 => 27,  80 => 23,  68 => 14,  62 => 10,  60 => 9,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -229,6 +245,14 @@ class __TwigTemplate_29e83b98b3892349a68580f3d2206d148cae490df982519b28e5979d553
                     <a class=\"nav-link {% if current_menu is defined and current_menu == 'property'  %}active {% endif %}\" href=\"{{ path('property.index') }}\">Acheter</a>
                 </li>
             </ul>
+
+            {% if app.user %}
+            <ul class=\"navbar-nav\">
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('logout') }}\" >Se déconnecter</a>
+                </li>
+            </ul>
+            {% endif %}
         </div>
     </nav>
     {% block body %}{% endblock %}

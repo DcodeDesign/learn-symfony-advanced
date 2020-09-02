@@ -85,38 +85,31 @@ class __TwigTemplate_627b1905c7803967fc59f8295ea4c3ba1dcd0e0dd3871a16574a7327ffd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div class=\"container mt-4\" >
-        <h1>Editer les biens</h1> 
+        echo "\t<div class=\"container mt-4\">
+\t\t<h1>Editer les biens</h1>
         ";
         // line 8
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 8, $this->source); })()), 'form_start');
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 8));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 9
+            echo "            <div class=\"alert alert-success\">
+                ";
+            // line 10
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+            </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 13
+        echo "\t\t";
+        echo twig_include($this->env, $context, "admin/property/_form.html.twig", ["form" => (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), "button" => "Editer"]);
         echo "
-        <div class=\"row\">
-            <div class=\"col-md-4\">";
-        // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), 'row');
-        echo "</div>
-            <div class=\"col-md-4\">";
-        // line 11
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'row');
-        echo "</div>
-            <div class=\"col-md-4\">";
-        // line 12
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'row');
-        echo "</div>
-
-
-            ";
-        // line 15
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'widget');
-        echo "
-                <button class=\"btn btn-primary\">Editer</button>
-            ";
-        // line 17
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'form_end');
-        echo "
-        </div>  
-    </div> 
+\t\t
+\t</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -138,7 +131,7 @@ class __TwigTemplate_627b1905c7803967fc59f8295ea4c3ba1dcd0e0dd3871a16574a7327ffd
 
     public function getDebugInfo()
     {
-        return array (  116 => 17,  111 => 15,  105 => 12,  101 => 11,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  108 => 13,  99 => 10,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -148,20 +141,16 @@ class __TwigTemplate_627b1905c7803967fc59f8295ea4c3ba1dcd0e0dd3871a16574a7327ffd
 {% block title 'Administartion : Editer les biens' %}
 
 {% block body %}
-    <div class=\"container mt-4\" >
-        <h1>Editer les biens</h1> 
-        {{ form_start(form) }}
-        <div class=\"row\">
-            <div class=\"col-md-4\">{{ form_row(form) }}</div>
-            <div class=\"col-md-4\">{{ form_row(form) }}</div>
-            <div class=\"col-md-4\">{{ form_row(form) }}</div>
-
-
-            {{ form_widget(form) }}
-                <button class=\"btn btn-primary\">Editer</button>
-            {{ form_end(form) }}
-        </div>  
-    </div> 
+\t<div class=\"container mt-4\">
+\t\t<h1>Editer les biens</h1>
+        {% for message in app.flashes('success') %}
+            <div class=\"alert alert-success\">
+                {{ message }}
+            </div>
+        {% endfor %}
+\t\t{{ include('admin/property/_form.html.twig', {form: form, button: 'Editer'}) }}
+\t\t
+\t</div>
 {% endblock %}
 ", "admin/property/edit.html.twig", "/Users/workspace/Documents/WORKSPACE/WORKSPACE-PHP/APP/learn_symphony_advanced/templates/admin/property/edit.html.twig");
     }

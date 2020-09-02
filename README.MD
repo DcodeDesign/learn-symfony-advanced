@@ -28,3 +28,37 @@ Créer un formulaire
 ```
 php bin/console make:form
 ```
+
+## Validation
+
+La validation est une tâche très courante dans les applications Web. Les données saisies dans les formulaires doivent être validées. Les données doivent également être validées avant d'être écrites dans une base de données ou transmises à un service Web.
+
+install :
+```
+composer require symfony/validator doctrine/annotations
+```
+
+## Securuty
+Système de sécurité de Symfony 
+
+install : 
+```
+composer require symfony/security-bundle
+```
+
+# Astuces :
+
+# Doctrine
+
+Créer de fausse données
+
+install :
+```
+composer require orm-fixtures --dev  
+```
+
+command :
+```
+php bin/console make:fixtures
+php bin/console doctrine:fixtures:load
+```
